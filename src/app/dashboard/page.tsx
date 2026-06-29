@@ -316,7 +316,7 @@ export default function DashboardPage() {
                 <CardHeader className="flex flex-row items-center justify-between border-b border-slate-100">
                   <div>
                     <CardTitle className="text-lg text-slate-900 flex items-center gap-2"><Target className="w-4 h-4 text-emerald-500"/> 7-Day Action Plan</CardTitle>
-                    <CardDescription className="text-slate-500 mt-1 font-medium">{results.planner.budgetDesc}</CardDescription>
+                    <CardDescription className="text-slate-500 mt-1 font-medium">{results.planner?.budgetDesc}</CardDescription>
                   </div>
                   <Button variant="outline" size="sm" onClick={() => handleCopy("Day 1-7 Plan details...", "7-Day Planner")} className="border-slate-200 bg-white text-slate-700 hover:text-emerald-600 hover:bg-emerald-50"><Copy className="h-4 w-4 mr-2" /> Copy</Button>
                 </CardHeader>
@@ -350,11 +350,11 @@ export default function DashboardPage() {
                       <div className="space-y-5">
                         <div className="flex items-center">
                           <span className="font-semibold text-slate-600 text-sm w-24">Age Range:</span>
-                          <span className="text-slate-900 font-bold text-sm bg-white border border-slate-200 px-3 py-1 rounded-md shadow-sm">{results.audience.targeting.age}</span>
+                          <span className="text-slate-900 font-bold text-sm bg-white border border-slate-200 px-3 py-1 rounded-md shadow-sm">{results.audience?.targeting?.age}</span>
                         </div>
                         <div className="flex items-center">
                           <span className="font-semibold text-slate-600 text-sm w-24">Location:</span>
-                          <span className="text-slate-900 font-bold text-sm bg-white border border-slate-200 px-3 py-1 rounded-md shadow-sm">{results.audience.targeting.location}</span>
+                          <span className="text-slate-900 font-bold text-sm bg-white border border-slate-200 px-3 py-1 rounded-md shadow-sm">{results.audience?.targeting?.location}</span>
                         </div>
                         
                         <div>
@@ -410,7 +410,7 @@ export default function DashboardPage() {
               <Card className="bg-white border-slate-200 shadow-sm hover:border-rose-300 transition-colors">
                 <CardHeader className="pb-3 flex flex-row items-center justify-between border-b border-slate-100">
                   <CardTitle className="text-lg text-slate-900 flex items-center gap-2"><Target className="w-4 h-4 text-rose-500"/> SEO Keywords</CardTitle>
-                  <Button variant="outline" size="sm" onClick={() => handleCopy(results.keywords?.join(", "), "SEO Keywords")} className="border-slate-200 bg-white text-slate-700 hover:text-blue-600 hover:bg-blue-50">
+                  <Button variant="outline" size="sm" onClick={() => handleCopy(results.keywords?.join(", ") || "", "SEO Keywords")} className="border-slate-200 bg-white text-slate-700 hover:text-blue-600 hover:bg-blue-50">
                     <Copy className="h-4 w-4 mr-2" /> Copy All
                   </Button>
                 </CardHeader>
