@@ -80,8 +80,8 @@ Instructions:
 3. Generate a 7-day marketing plan/planner.
 4. Generate Facebook Ads Targeting details (Age, Demographics, Interests, Behaviors).
    - IMPORTANT: Facebook Ads Targeting keywords MUST ALWAYS BE IN ENGLISH.
-5. Generate 2 Irresistible Offer Ideas based on the niche.
-6. Generate 10 SEO friendly keywords (short-tail and long-tail) based on the niche.
+5. Generate 2 Irresistible Offer Ideas based on the niche. These MUST be in the requested Language (${language === 'bn' ? 'Bengali' : 'English'}).
+6. Generate 10 SEO friendly keywords (short-tail and long-tail) based on the niche. These MUST be in the requested Language (${language === 'bn' ? 'Bengali' : 'English'}).
 
 Respond STRICTLY with the following JSON structure:
 {
